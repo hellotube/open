@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>원클릭으로 여러 사이트 열기</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 1em 2em;
+            font-size: 1.2em;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .message {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-top: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .instructions {
+            font-size: 1.2em;
+            color: #34495e;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #2980b9;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>📂 링크 한 번에 열기</h1>
+    <p>아래 버튼을 누르면 여러 사이트가 한꺼번에 열립니다.</p>
+    <button onclick="openMultipleUrls()">열기</button>
+
+    <div class="message">
+        📢 **팝업 및 리디렉션을 허용해주세요!** 📢
+    </div>
+    <div class="instructions">
+        크롬 브라우저에서 팝업과 리디렉션을 **허용**해야 여러 개의 사이트가 한 번에 열립니다.
+        <br><br>
+        설정 변경은 주소창 왼쪽의 **<span class="highlight">자물쇠 아이콘</span>** 클릭 후,
+        "팝업 및 리디렉션"을 **<span class="highlight">허용</span>**으로 설정해 주세요!
+    </div>
+</div>
+
+<script>
+    function openMultipleUrls() {
+        const urls = [
+            "https://youtu.be/CmbEUFhjbkc",
+            "https://www.youtube.com/watch?v=XMfeuXwqP_o",
+            "https://www.youtube.com/watch?v=n-oQSyJhz6c",
+            "https://www.youtube.com/watch?v=E9T_g2N4j54",
+            "https://www.youtube.com/watch?v=kWaKdTh2kwU",
+            "https://www.youtube.com/watch?v=8dsywJ0c8YM",
+            "https://www.youtube.com/watch?v=1ZrQ3CMZFX0",
+            "https://www.youtube.com/watch?v=USPPR1xNsD4",
+            "https://www.youtube.com/watch?v=yr79Cz6YTkg",
+            "https://www.youtube.com/watch?v=9qYh_OoUOnk",
+            "https://www.youtube.com/watch?v=BTYyuELvI_k",
+            "https://www.youtube.com/watch?v=9w2u7Que-Y8",
+            "https://www.youtube.com/watch?v=FG4BDVte22U",
+            "https://www.youtube.com/watch?v=ZFXa4MCvfgk",
+            "https://www.youtube.com/watch?v=B41yJ4CtOsQ",
+            "https://www.youtube.com/watch?v=TjqDHD0o75g",
+            "https://youtu.be/CmbEUFhjbkc"
+        ];
+        urls.forEach(url => window.open(url, '_blank'));
+    }
+</script>
+
+</body>
+</html>
